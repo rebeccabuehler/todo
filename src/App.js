@@ -31,13 +31,11 @@ function App() {
   return (
     <div>
       <h1>Todo List</h1>
-      <div>
         {todos.map((todo, i) => (
           <Todo index={i} key={i} todo={todo} remove={removeTodo} />
         ))}
         <br/>
         <ToDoForm addTodo={addTodo}/>
-      </div>
     </div>
   );
 }
