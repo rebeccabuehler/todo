@@ -53,7 +53,7 @@ function ToDoForm({addTodo}) {
   
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor='new-todo'>Add todo: </label>
+      <label> Add todo: </label>
       <input
         type="text"
         className="input"
