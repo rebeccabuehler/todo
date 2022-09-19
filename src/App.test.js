@@ -1,14 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-//import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { getQueriesForElement } from '@testing-library/react';
 import App from './App';
-
-function render(components) {
-  const root = document.createElement('div');
-  ReactDOM.render(components, root);
-  return getQueriesForElement(root);
-}
 
 test('todo list', () => {
   const { getByText, getByLabelText } = render(<App/>);
