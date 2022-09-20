@@ -32,7 +32,7 @@ function App() {
     <div id='todo'>
       <h1>ToDo List</h1>
         {todos.map((todo, i) => (
-          <Todo index={i} key={i} todo={todo} remove={removeTodo} />
+          <Todo id="todo" index={i} key={i} todo={todo} remove={removeTodo} />
         ))}
         <br/>
         <ToDoForm addTodo={addTodo}/>
@@ -52,15 +52,17 @@ function ToDoForm({addTodo}) {
   };
   
   return (
-    <form onSubmit={handleSubmit}>
-      <label> Add todo: </label>
+    <form> 
+      <label htmlFor='new-todo'> Add todo: </label>
       <input
+        id='new-todo'
         type="text"
         className="input"
         value={value}
         placeholder="Add ToDo ..."
         onChange={(e) => setValue(e.target.value)}
       />
+      <button onClick={handleSubmit}>Add todo</button>
     </form>
   );
 }
