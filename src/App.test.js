@@ -1,8 +1,6 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import { getQueriesForElement } from '@testing-library/react';
 import App from './App';
-import { getValue } from '@testing-library/user-event/dist/utils';
 import userEvent from '@testing-library/user-event';
 
 test('todo list', () => {
