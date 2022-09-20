@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, getByText } from '@testing-library/react';
 import App from './App';
 import userEvent from '@testing-library/user-event';
+
 
 test('todo list', () => {
   const { getByText, getByLabelText } = render(<App/>);

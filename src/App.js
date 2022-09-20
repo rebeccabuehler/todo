@@ -46,9 +46,9 @@ function ToDoForm({addTodo}) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (!value) return;
-    addTodo(value);
-    setValue("");
+      if (!value) return;
+      addTodo(value);
+      setValue("");
   };
   
   return (
